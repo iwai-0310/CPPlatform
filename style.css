@@ -1,5 +1,5 @@
 *{
-    background-color: #1a1a1a;
+    /* background-color: #1a1a1a; */
     margin:0;
     border:border-box;
 }
@@ -117,5 +117,84 @@ i{
 /* part 3:content */
 .content{
     height: 1000px;
-    background-color: #1a1a1a;
+    background-color: white;
+}
+/* part 3.1 section for arrows but not yet functional */
+.arrow-box-container{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #5D5C61;
+}
+.arrows{
+    height: 40px;
+    width: 40px;
+    background-color: #282828;
+    /* display: flex;
+    align-items: center; */
+    border-radius: 50%;
+}
+.arrows i{
+    position: relative;
+    top: 10px;
+    right: 7px;
+    background-color: #282828;
+}
+#arrow1{
+    margin-right: 10px;
+}
+
+#arrow2{
+    margin-left:10px;
+}
+/* part 3.2 color coded containers in the content section of the page */
+.content-courses{
+    /* padding-top: 20px;
+    padding-left:20px;
+    padding-right: 20px; */
+
+    height: 130px;
+    width: 100%;
+    background-color:#938e94;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#course1{ 
+    height: 110px;
+    width: 22%;
+    background-color: #1e533f;
+    border-radius: 10px;
+}
+#course2{
+    /* margin-top:20px;
+    margin-bottom: 20px; */
+    height: 110px;
+    width: 22%;
+    background-color: #6b5df8;
+    border-radius: 10px;
+}
+#course3{
+    height: 110px;
+    width: 22%;
+    background-color: #E7717D;
+    border-radius: 10px;
+   
+}
+#course4{
+    height: 110px;
+    width: 22%;
+    background-color:#2e8fd2;
+    border-radius: 10px;
+    
 }
