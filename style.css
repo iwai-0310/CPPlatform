@@ -116,7 +116,7 @@ i{
 }
 /* part 3:content */
 .content{
-    height: 1000px;
+    /* height: 1000px; */
     background-color: white;
 }
 /* part 3.1 section for arrows but not yet functional */
@@ -149,6 +149,7 @@ i{
 #arrow2{
     margin-left:10px;
 }
+
 /* part 3.2 color coded containers in the content section of the page */
 .content-courses{
     /* padding-top: 20px;
@@ -188,13 +189,167 @@ i{
     height: 110px;
     width: 22%;
     background-color: #E7717D;
-    border-radius: 10px;
-   
+    border-radius: 10px;  
 }
 #course4{
     height: 110px;
     width: 22%;
     background-color:#2e8fd2;
     border-radius: 10px;
+}
+/* part 3.3 - creating see all link and heading for study plan in the content section  */
+.content-studyplan{
+    height: 50px;
+    background-color: #1e533f;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+}
+.study-plan-heading{
+    width: 100px;
+    background-color: #1e533f;
+    display: flex;
+    justify-content: start;
+}
+.study-plan-seeall{
+    width: 90%;
+   align-self: center;
+   display: flex;
+   justify-content: flex-end;
+}
+.study-plan-seeall a{
+    background-color: #1e533f;
+}
+/* part 3.4 - creating 6 different cards for different study plan */
+.content-plan-cards{
+    height: 200px;
+    width: 100%;
+    background-color: #6b5df8;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+
+}
+.content-cards{
+    height: 40%;
+    width: 20%;
+    /* height: 100px;
+    width: 500px; */
+    background-color: #E7717D;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    /* flex:200px;
+    flex-direction:column; */
+    /* flex-wrap: wrap;
+    flex: 200px;
+    flex-direction: row; */
+    margin-left: 20px;
+    margin-right: 15px;
     
+}
+.card-Image{
+    height: 80%;
+    width: 30%;
+    background-color: #43ce99;
+    border-radius: 20px;
+    position: relative;
+    left:10px;
+}
+.card-data{
+    position:relative;
+    left:20px;
+}
+.line{
+    background-color: #E7717D;
+    height: 30px;
+    width: 100%;
+    
+}
+/* part 3.5 - The line that appears after all the cards  */
+.line hr{
+    color: #6b5df8;
+    position: relative;
+    top: 15px
+}
+.DSA-topics{
+    height: 40px;
+    width: 100%;
+    background-color: #5D5C61;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.topic{
+    height: 30px;
+    width: 10%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;  
+}
+.topic-num{
+    height: 25px;
+    width: 50%;
+    background-color: #2e8fd2;
+    position: relative;
+    left: 7px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.topic-num h4{
+    position: relative;
+    left: 10px;
+}
+#Hash{
+    width: 150px;
+}
+#Hash > .topic-num{
+    width: 60px;
+    position: relative;
+    left: 10px;
+}
+#DP{
+    width: 230px;
+}
+#DP > .topic-num{
+    width: 60px;
+}
+.expand-items{
+    height: 40px;
+    width: 100px;
+    background-color: #43ce99;
+    display: flex;
+    align-items: center;
+}
+.expand{
+    position: relative;
+    left: 10px;
+}
+.expand-symbol i{
+    width: 16px;
+}
+.stack-topics{
+    width: 100%;
+    height: 65px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.stack{
+    height: 40px;
+   width: 150px;
+   background-color: #1e533f;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+}
+.slide i{
+    font-size: 20px;
+}
+.stack i{
+    background-color: white;
 }
