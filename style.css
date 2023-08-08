@@ -274,6 +274,7 @@ i{
     position: relative;
     top: 15px
 }
+/* part 3.6- All the DSA topics and the expand button */
 .DSA-topics{
     height: 40px;
     width: 100%;
@@ -352,4 +353,67 @@ i{
 }
 .stack i{
     background-color: white;
+}
+/* part 3.7 The search and different sorting ways */
+.search-and-sort{
+    height: 100px;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.select-tags{
+    height: 30px;
+    width: 160px;
+    background-color: mediumpurple;
+  
+}
+.Lists-select{
+    height: 100%;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: large;
+    border-radius: 5px;
+}
+.SAS-search{
+    height: 50px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+#mag{
+    height: 30px;
+    width: 30px;
+    color: #1a1a1a;
+    background-color: white;
+    font-size: 25px;
+    border-radius: 5px;
+}
+.search-input{
+    height: 30px;
+    width: 400px;
+}
+.settings{
+    height: 30px;
+    width: 30px;
+    font-size:25px;
+    border-radius:5px;
+}
+.shuffle{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.shuffle-icon{
+    height: 30px;
+    width:30px;
+    font-size:30px
+}
+.pick-one{
+    height: 30px;
+    width: 100px;
 }
