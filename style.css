@@ -361,13 +361,14 @@ i{
     background-color: #1a1a1a;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 .select-tags{
     height: 30px;
-    width: 160px;
+    width: 250px;
     background-color: mediumpurple;
+    border-radius: 10px;
   
 }
 .Lists-select{
@@ -380,7 +381,7 @@ i{
 }
 .SAS-search{
     height: 50px;
-    width: 500px;
+    width: 800px;
     display: flex;
     align-items: center;
 }
@@ -389,31 +390,118 @@ i{
     width: 30px;
     color: #1a1a1a;
     background-color: white;
-    font-size: 25px;
-    border-radius: 5px;
+    font-size: 30px;
+    border-radius: 10px;
 }
 .search-input{
     height: 30px;
-    width: 400px;
+    width: 700px;
+    border-radius: 10px;
 }
 .settings{
     height: 30px;
-    width: 30px;
-    font-size:25px;
-    border-radius:5px;
+    width: 50px;
+    font-size:30px;
+    border-radius:10px;
 }
 .shuffle{
     width: 200px;
     height: 30px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .shuffle-icon{
     height: 30px;
     width:30px;
-    font-size:30px
+    border-radius: 50%;
+    font-size:25px;
+    color:white
+}
+#round-shuffle-icon{
+    border-radius: 50%;
 }
 .pick-one{
     height: 30px;
     width: 100px;
+    color:white;
+    font-weight: 50px;
+}
+/* part 3.8 - Question tags section  */
+.question-tags{
+    height: 50px;
+    width: 100%;
+    background-color: #43ce99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.real-tag{
+    height: 20px;
+    width: 100px;
+    background-color: #1e533f;
+}
+#title-tag{
+    width: 400px;
+}
+/* part 3.9  questions */
+#easy{
+    color: green;
+}
+#hard{
+    color: red;
+}
+#medium{
+    color: orange;
+}
+.question{
+    height: 50px;
+    width: 100%;
+    background-color: #5D5C61;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.question-status{
+    height: 50%;
+    width: 100px;
+    background-color: #2e8fd2;
+    font-size: 20px;
+}
+#status-icon{
+    background-color: #2e8fd2;
+    color: orange;
+}
+.question-title{
+    height: 50%;
+    width: 400px;
+    background-color: #a5cf62;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.question-solution{
+    height: 50%;
+    width: 100px;
+    background-color: #E7717D;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#solution-icon{
+    background-color: #E7717D;
+    color: green;
+}
+.question-acceptance{
+    height: 50%;
+    width: 100px;
+    background-color: #6b5df8;
+    font-size:20px;
+}
+.question-difficulty{
+    height: 50%;
+    width: 100px;
+    background-color: antiquewhite;
+    font-size:20px;
+    color: orange;
 }
