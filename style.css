@@ -3,6 +3,9 @@
     margin:0;
     border:border-box;
 }
+body{
+    background-color: #1a1a1a;
+}
 /* part 1: navbar code */
 .navbar{
     width:100%;
@@ -117,7 +120,7 @@ i{
 /* part 3:content */
 .content{
     /* height: 1000px; */
-    background-color: white;
+    background-color: #1a1a1a;
 }
 /* part 3.1 section for arrows but not yet functional */
 .arrow-box-container{
@@ -126,7 +129,7 @@ i{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #5D5C61;
+    background-color: #1a1a1a;
 }
 .arrows{
     height: 40px;
@@ -158,7 +161,7 @@ i{
 
     height: 130px;
     width: 100%;
-    background-color:#938e94;
+    background-color:#1a1a1a;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -200,7 +203,7 @@ i{
 /* part 3.3 - creating see all link and heading for study plan in the content section  */
 .content-studyplan{
     height: 50px;
-    background-color: #1e533f;
+    background-color: #1a1a1a;
     width: 100%;
     display: flex;
     align-items: center;
@@ -208,7 +211,7 @@ i{
 }
 .study-plan-heading{
     width: 100px;
-    background-color: #1e533f;
+    background-color: #1a1a1a;
     display: flex;
     justify-content: start;
 }
@@ -217,15 +220,17 @@ i{
    align-self: center;
    display: flex;
    justify-content: flex-end;
+   
 }
 .study-plan-seeall a{
-    background-color: #1e533f;
+    background-color: #1a1a1a;
+    color:rgb(20, 97, 212);
 }
 /* part 3.4 - creating 6 different cards for different study plan */
 .content-plan-cards{
     height: 200px;
     width: 100%;
-    background-color: #6b5df8;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
@@ -237,7 +242,7 @@ i{
     width: 20%;
     /* height: 100px;
     width: 500px; */
-    background-color: #E7717D;
+    background-color: #282828;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -261,16 +266,17 @@ i{
 .card-data{
     position:relative;
     left:20px;
+    color: white;
 }
 .line{
-    background-color: #E7717D;
+    background-color: #1a1a1a;
     height: 30px;
     width: 100%;
     
 }
 /* part 3.5 - The line that appears after all the cards  */
 .line hr{
-    color: #6b5df8;
+    color: #5D5C61;
     position: relative;
     top: 15px
 }
@@ -278,7 +284,7 @@ i{
 .DSA-topics{
     height: 40px;
     width: 100%;
-    background-color: #5D5C61;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -286,14 +292,17 @@ i{
 .topic{
     height: 30px;
     width: 10%;
-    background-color: antiquewhite;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;  
+}
+.topic-name{
+    color:white;
 }
 .topic-num{
     height: 25px;
     width: 50%;
-    background-color: #2e8fd2;
+    background-color: #282828;
     position: relative;
     left: 7px;
     border-radius: 20px;
@@ -303,6 +312,7 @@ i{
 .topic-num h4{
     position: relative;
     left: 10px;
+    color: #5D5C61;
 }
 #Hash{
     width: 150px;
@@ -321,7 +331,7 @@ i{
 .expand-items{
     height: 40px;
     width: 100px;
-    background-color: #43ce99;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
 }
@@ -331,11 +341,12 @@ i{
 }
 .expand-symbol i{
     width: 16px;
+    background-color: #1a1a1a;
 }
 .stack-topics{
     width: 100%;
     height: 65px;
-    background-color: aquamarine;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -343,16 +354,22 @@ i{
 .stack{
     height: 40px;
    width: 150px;
-   background-color: #1e533f;
+   background-color: #282828;
    border-radius: 20px;
    display: flex;
    align-items: center;
 }
+.stack h4{
+    color: #5D5C61;
+}
 .slide i{
     font-size: 20px;
+    
 }
 .stack i{
-    background-color: white;
+    /* background-color: white; */
+    color: white;
+    background-color: #1a1a1a;
 }
 /* part 3.7 The search and different sorting ways */
 .search-and-sort{
@@ -378,6 +395,9 @@ i{
     font-weight: 100;
     font-size: large;
     border-radius: 5px;
+    border-color: #1a1a1a;
+    color: #5D5C61;
+    background-color: #282828;
 }
 .SAS-search{
     height: 50px;
@@ -388,8 +408,8 @@ i{
 #mag{
     height: 30px;
     width: 30px;
-    color: #1a1a1a;
-    background-color: white;
+    color: #5D5C61;
+    background-color: #1a1a1a;
     font-size: 30px;
     border-radius: 10px;
 }
@@ -397,12 +417,20 @@ i{
     height: 30px;
     width: 700px;
     border-radius: 10px;
+    border-color: #1a1a1a;
+    background-color: #282828;
+    color: #5D5C61;
 }
 .settings{
     height: 30px;
     width: 50px;
     font-size:30px;
     border-radius:10px;
+    border: #282828;
+}
+.settings i{
+    background-color: #1a1a1a;
+    color: #5D5C61;
 }
 .shuffle{
     width: 200px;
@@ -416,7 +444,10 @@ i{
     width:30px;
     border-radius: 50%;
     font-size:25px;
-    color:white
+    color:#5D5C61;
+}
+.shuffle-icon i{
+    background-color: #1a1a1a;
 }
 #round-shuffle-icon{
     border-radius: 50%;
@@ -424,14 +455,14 @@ i{
 .pick-one{
     height: 30px;
     width: 100px;
-    color:white;
+    color:#5D5C61;
     font-weight: 50px;
 }
 /* part 3.8 - Question tags section  */
 .question-tags{
     height: 50px;
     width: 100%;
-    background-color: #43ce99;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -439,7 +470,10 @@ i{
 .real-tag{
     height: 20px;
     width: 100px;
-    background-color: #1e533f;
+    background-color: #1a1a1a;
+}
+.real-tag h4{
+    color: #5D5C61;
 }
 #title-tag{
     width: 400px;
@@ -457,7 +491,7 @@ i{
 .question{
     height: 50px;
     width: 100%;
-    background-color: #5D5C61;
+    background-color: #1a1a1a;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -465,43 +499,45 @@ i{
 .question-status{
     height: 50%;
     width: 100px;
-    background-color: #2e8fd2;
+    background-color: #1a1a1a;
     font-size: 20px;
 }
 #status-icon{
-    background-color: #2e8fd2;
+    background-color:#1a1a1a;
     color: orange;
 }
 .question-title{
     height: 50%;
     width: 400px;
-    background-color: #a5cf62;
+    background-color: #1a1a1a;
+    color: white;
     font-size: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .question-solution{
     height: 50%;
     width: 100px;
-    background-color: #E7717D;
+    background-color: #1a1a1a;
     font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 #solution-icon{
-    background-color: #E7717D;
+    background-color: #1a1a1a;
     color: green;
 }
 .question-acceptance{
     height: 50%;
     width: 100px;
-    background-color: #6b5df8;
+    background-color: #1a1a1a;
+    color: white;
     font-size:20px;
 }
 .question-difficulty{
     height: 50%;
     width: 100px;
-    background-color: antiquewhite;
+    background-color: #1a1a1a;
     font-size:20px;
     color: orange;
 }
