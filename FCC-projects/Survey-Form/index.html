@@ -13,36 +13,84 @@
 
     <body>
         <div class="survey-title">
-        <h1 id="title">Health Survey</h1>
-        <p id="description">Please fill out the form with correct details.</p>
-        
+            <h1 id="title">Health Survey</h1>
+            <p id="description">Please fill out the form with correct details.</p>
+
         </div>
         <hr>
         <form id="survey-form">
-            <label id="name-label"> Name <input id="name" type="text" placeholder="Enter your name" required /></label>
+            <div class="form-group">
+                <div class="name-data-container">
+                    <div class="name">
+                        <label id="name-label"> Name <input id="name" type="text" placeholder="Enter your name"
+                                required /></label>
+                    </div>
+                    <div class="date">
+                        <label id="date-label">Date<input id="date" type="date" placeholder="MM-DD-YYYY" required />
+                        </label>
+                    </div>
+                </div>
+                <label id="email-label"> Email <input id="email" type="email" placeholder="Enter your email" /></label>
 
-            <label id="email-label"> Email <input id="email" type="email" placeholder="Enter your email"
-                    required /></label>
+                <label for="phone">Phone Number<input id="phone" type="phone" placeholder="(000) 000-000" /></label>
 
-            <label id="number-label">Age <input type="number" id="number" type="email" placeholder="Age" min=6
-                    max=20 /></label>
-            <select id="dropdown">
-                <option>1</option>
-                <option>2</option>
-            </select>
-            <input name="some" type="radio" value=102 />
+                <div class="Address">
+                    <label for="street_address">Street Address</label>
+                    <input type="text" id="street_address" required />
 
-            <input name="some" value=101 type="radio" />
+                    <label for="street_address_Line-2">Address Line 2</label>
+                    <input type="text" id="street_address_Line-2" />
 
-            <input type="checkbox" value=1 />
-            <input type="checkbox" value=2 />
-            <input type="checkbox" value=3 />
-            <input type="checkbox" value=4 />
-            <input type="checkbox" value=5 />
+                    <label for="city">City</label>
+                    <input type="text" id="city" required />
 
-            <textarea></textarea>
+                    <label for="state">State</label>
+                    <input type="text" id="state" required />
 
-            <button id="submit">Submit</button>
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal" required />
+                </div>
+
+                <div class="age-dropdown-conatiner">
+                    <div class="age">
+                        <label id="number-label">Age <input type="number" id="number" type="email" placeholder="Age"
+                                min=6 max=20 /></label>
+                    </div>
+                    <div class="dropdown">
+                        <Label id="gender">Gender :</Label>
+                        <select id="dropdown">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="allergies">
+                    <label id="allergies">Do you have any food allergies? </label>
+                    <div class="radio-container">
+                        <label><input name="some" type="radio" value=102 />Yes</label>
+                        <label><input name="some" value=101 type="radio" />No</label>
+                    </div>
+                </div>
+                <hr>
+                <label class="aware">Are you taking any medications for</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label"><input type="checkbox" value=1 />Diabetes Type-1</label>
+                    <label class="checkbox-label"><input type="checkbox" value=2 />High BP</label>
+                    <label class="checkbox-label"><input type="checkbox" value=3 />High Cholestrol</label>
+                    <label class="checkbox-label"><input type="checkbox" value=4 />Lithium</label>
+                    <label class="checkbox-label"><input type="checkbox" value=5 />Coumadin</label>
+                    <label class="checkbox-label"><input type="checkbox" value=6 />Lithium</label>
+                    <label class="checkbox-label"><input type="checkbox" value=6 />Pregnancy</label>
+                    <label class="checkbox-label"><input type="checkbox" value=7 />Diabetes Type-2</label>
+                    
+                </div>
+                <hr>
+                <label class="aware">Other Info. we should be kept aware about.</label>
+                <textarea ></textarea>
+
+                <button id="submit">Submit</button>
+            </div>
         </form>
     </body>
 
