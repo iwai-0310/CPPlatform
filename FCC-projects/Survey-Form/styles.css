@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background: linear-gradient(45deg,red 20%, pink 40%, orange 60%, aqua 70%, aquamarine 80%, rgb(13, 150, 13) 100%);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#submit{
+    min-width: 100px;
+    min-height: 50px;
+  }
+#survey-form{
+    color: black;
+    /* background: linear-gradient(white,aquamarine); */
+    height: 100vh;
+    width: 100vw;    
+    backdrop-filter: blur(50px);
+}
+.survey-title{
+    color: rgb(11, 11, 105);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+}
+.survey-title h1{
+    margin: 0;
+    padding: 5px 0;
+}
+.survey-title p{
+    margin: 0;
+    padding: 10px 0 ;
+}

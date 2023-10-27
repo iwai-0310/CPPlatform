@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Survey form
+    </title>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <head>
+
+    <body>
+        <div class="survey-title">
+        <h1 id="title">Health Survey</h1>
+        <p id="description">Please fill out the form with correct details.</p>
+        
+        </div>
+        <hr>
+        <form id="survey-form">
+            <label id="name-label"> Name <input id="name" type="text" placeholder="Enter your name" required /></label>
+
+            <label id="email-label"> Email <input id="email" type="email" placeholder="Enter your email"
+                    required /></label>
+
+            <label id="number-label">Age <input type="number" id="number" type="email" placeholder="Age" min=6
+                    max=20 /></label>
+            <select id="dropdown">
+                <option>1</option>
+                <option>2</option>
+            </select>
+            <input name="some" type="radio" value=102 />
+
+            <input name="some" value=101 type="radio" />
+
+            <input type="checkbox" value=1 />
+            <input type="checkbox" value=2 />
+            <input type="checkbox" value=3 />
+            <input type="checkbox" value=4 />
+            <input type="checkbox" value=5 />
+
+            <textarea></textarea>
+
+            <button id="submit">Submit</button>
+        </form>
+    </body>
+
+</html>
