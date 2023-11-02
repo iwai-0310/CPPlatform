@@ -11,8 +11,28 @@ body{
 header{
  /* background-color: rgb(178, 52, 52); */
  background: linear-gradient(-90deg, #D2B7E5 10% , #C19EE0 25%, #B185DB 50% , #A06CD5 60%, #9163CB 80% ,#815AC0 100%);
- height: 200px;
+ height: 12rem;
  width: 100%;
+}#nav-bar{
+    position: absolute;
+}
+ul{
+    display: flex;
+}
+#nav-bar label{
+    padding-left: 1rem;
+}
+li{
+    padding-left: 1rem;
+    width: 7rem;
+    list-style:none;
+}
+#butterg{
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    width: 8rem;
+    height: 8rem;;
 }
 #TheCompany p{
     margin: 3rem;
