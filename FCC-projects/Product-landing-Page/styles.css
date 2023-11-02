@@ -27,6 +27,10 @@ li{
     width: 7rem;
     list-style:none;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 #butterg{
     position: absolute;
     right: 0;
