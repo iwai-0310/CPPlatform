@@ -33,11 +33,28 @@ section p{
     height: 30%;
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-#classicDC--Dark5{
+#classicDC h1{
+    margin: 10px;
+    margin-bottom: 0;
+    font-size: 4rem;
+    font-family: 'Roboto Slab','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.classic{
     border: 2px solid white;
-    width: 30%;
+    width: 40%;
     height: 100%;
+    margin-top: 5rem;
+}
+.classic h3{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.classic p{
+    margin-top: 3px;
+    margin-bottom: 10px;
 }
 footer{
     background-color: rgb(178, 52, 52) ;
