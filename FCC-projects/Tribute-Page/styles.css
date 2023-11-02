@@ -14,19 +14,29 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 300px;
     height: 500px;
+    border: 5px double green;
+    background-color: #74C69D;   
+    margin-left: 40%;
+    margin-right: 40%;
+}
+#img-div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   background-color: #52B788; 
+    filter: blur(10px); 
+    z-index: -1; 
 }
 
 img{
     width: 100%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
 }
-#image{
-  display: block;
-  max-width: 100%;
-    height: auto;
-}
+
 html{
     font-size: 62.5%;
 }
@@ -54,22 +64,32 @@ hr {
     margin: 1.5rem 0;
     border: 1px solid rgba(120, 120, 120, 0.6);
 }
-h2{
+h2, h1{
     font-family: 'Raleway', sans-serif;
     font-size: 4rem;
 }
-#villian-info{
+#villain{
+    text-align: center;
+    margin-top: 20px;
+}
+.hero-subtitle{
+    font-size: 1.5rem;
+    margin: 30px 30%;
+   
+}
+#villain-info{
     width: 80%;
+    border: 2px solid gray;
+    margin: 0 auto;
+     position: static;
+    top: 100px;
+
 }
 #img-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
-    position: absolute; 
-    top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
+    justify-content: flex-start;
     margin-top: 20px;
 }
 #image {
@@ -77,9 +97,18 @@ h2{
     max-width: 300px; /* Adjust the maximum width of the image */
     object-fit: cover;
 }
-#villian-info{
-    position: absolute;
-    top: 100px;
+
+#title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
 }
-  
-  
+#img-caption {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    margin-top: 10px; /* Add some space between the image and the caption */
+}
+h3{
+    margin-left: 70%;
+    font-size: 1.7rem;
+    font-weight: bold;
+}

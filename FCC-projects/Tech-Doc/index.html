@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+    <main id="main-doc">
+        <section id="Editor_setup" class="main-section">
+            <header>Editor Setup</header>
+            <h2># Syntax support</h2>
+            <p>Tailwind CSS uses a lot of custom CSS at-rules like @tailwind, @apply, and @screen, and in many editors
+                this can trigger warnings or errors where these rules aren’t recognized.
+                If you’re using VS Code, our official Tailwind CSS IntelliSense plugin includes a dedicated Tailwind CSS
+                language mode that has support for all of the custom at-rules and functions Tailwind uses.
+                In some cases, you may need to disable native CSS linting/validations if your editor is very strict
+                about the syntax it expects in your CSS files.
+            </p>
+            <h2># Automatic class sorting with Prettier</h2>
+            <p>It works seamlessly with custom Tailwind configurations, and because it’s just a Prettier plugin, it
+                works anywhere Prettier works — including every popular editor and IDE, and of course on the command
+                line.</p>
+
+            <code>
+
+                <!-- After button class -->
+                class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">
+            </code>
+
+            <ul> IntelliSense for VS Code
+                <li>Autocomplete</li>
+                <li>Linting</li>
+                <li>Hover Previews</li>
+                <li>Syntax Highlighting</li>
+            </ul>
+
+        </section>
+        <section id="PostCSS" class="main-section">
+            <header>Using PostCSS as your preprocessor</header>
+            <p>If you’re using Tailwind for a brand new project and don’t need to integrate it with any existing
+                Sass/Less/Stylus stylesheets, you should highly consider relying on other PostCSS plugins to add the
+                preprocessor features you use instead of using a separate preprocessor.For a fairly comprehensive list
+                of available PostCSS plugins see the PostCSS GitHub repository, but here are a few important ones we use
+                on our own projects and can recommend.</p>
+            <h2># Build-time imports</h2>
+            <p>One of the most useful features preprocessors offer is the ability to organize your CSS into multiple
+                files and combine them at build time by processing @import statements in advance, instead of in the
+                browser.
+
+                The canonical plugin for handling this with PostCSS is postcss-import.
+
+                To use it, install the plugin via npm:</p>
+            <code>npm install -D postcss-import</code>
+            <br>
+            <br>
+            <h2># Nesting</h2>
+            <p>To add support for nested declarations, we recommend our bundled tailwindcss/nesting plugin, which is a
+                PostCSS plugin that wraps postcss-nested or postcss-nesting and acts as a compatibility layer to make
+                sure your nesting plugin of choice properly understands Tailwind’s custom syntax like @apply and
+                @screen.</p>
+            <p>By default, it uses the postcss-nested plugin under the hood, which uses a Sass-like syntax and is the
+                plugin that powers nesting support in the Tailwind CSS plugin API.
+
+                If you’d rather use postcss-nesting (which is based on the work-in-progress CSS Nesting specification),
+                first install the plugin:</p>
+            <code>npm install -D postcss-nesting</code>
+            <ul> Best practise
+                <li>Use a regular media query and theme()</li>
+                <li>Use the @screen directive at the top-level</li>
+                <li>Use theme() instead of @apply</li>
+                <li>Use @css to avoid processing as Stylus</li>
+            </ul>
+        </section>
+        <section id="Optimizing" class="main-section">
+            <header>Optimizing for Production</header>
+            <p>Tailwind CSS is incredibly performance focused and aims to produce the smallest CSS file possible by only
+                generating the CSS you are actually using in your project.
+
+                Combined with minification and network compression, this usually leads to CSS files that are less than
+                10kB, even for large projects. For example, Netflix uses Tailwind for Netflix Top 10 and the entire
+                website delivers only 6.5kB of CSS over the network.
+
+                With CSS files this small, you don’t have to worry about complex solutions like code-splitting your CSS
+                for each page, and can instead just ship a single small CSS file that’s downloaded once and cached until
+                you redeploy your site.
+
+                For the smallest possible production build, we recommend minifying your CSS with a tool like cssnano,
+                and compressing your CSS with Brotli.</p>
+            <p>If you’re using Tailwind CLI, you can minify your CSS by adding the --minify flag:</p>
+            <code>npx tailwindcss -o build.css --minify</code>
+            <ul>Plugins
+                <li>tailwindcss</li>
+                <li>autoprefixers</li>
+            </ul>
+        </section>
+        <section id="Browser" class="main-section">
+            <header>Browser Support</header>
+            <p>Understanding which browsers Tailwind supports and how to manage vendor prefixes.
+
+                In general, Tailwind CSS v3.0 is designed for and tested on the latest stable versions of Chrome,
+                Firefox, Edge, and Safari. It does not support any version of IE, including IE 11.
+
+                While most of the features in Tailwind CSS will work in all modern browsers, Tailwind also includes APIs
+                for several bleeding-edge features that aren’t yet supported by all browsers, for example the
+                :focus-visible pseudo-class and backdrop-filter utilities.
+
+                Since Tailwind is such a low-level framework, it’s easy to avoid these features if you can’t use them by
+                simply not using the utility or modifier that’s not supported, much like how you just wouldn’t use those
+                CSS features in your CSS. </p>
+            <h2># Vendor Prefixes</h2>
+            <p>Many CSS properties require vendor prefixes to be understood by browsers, for example background-clip:
+                text needs the -webkit prefix to work in most browsers. If you’re using the Tailwind CLI tool, vendor
+                prefixes like this will be added automatically.
+
+                If not, we recommend that you use Autoprefixer, which is a PostCSS plugin that automatically adds any
+                necessary vendor prefixes based on the browsers you tell it you need to support.
+
+                To use it, install it via npm:</p>
+            <code>npm install -D autoprefixer</code>
+            <ul>.bg-clip-text
+                <li> background-clip: text;</li>
+                <li>-webkit-background-clip: text;</li>
+            </ul>
+        </section>
+
+        <section id="Responsive" class="main-section">
+            <header>Responsive Design</header>
+            <p>Using responsive utility variants to build adaptive user interfaces.
+                ​
+                Overview
+
+                Every utility class in Tailwind can be applied conditionally at different breakpoints, which makes it a
+                piece of cake to build complex responsive interfaces without ever leaving your HTML.</p>
+            <p>This works for every utility class in the framework, which means you can change literally anything at a
+                given breakpoint — even things like letter spacing or cursor styles.
+
+                Here’s a simple example of a marketing page component that uses a stacked layout on small screens, and a
+                side-by-side layout on larger screens (resize your browser to see it in action):</p>
+            <h2># Working mobile-first</h2>
+            <p>By default, Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other
+                frameworks like Bootstrap.
+
+                What this means is that unprefixed utilities (like uppercase) take effect on all screen sizes, while
+                prefixed utilities (like md:uppercase) only take effect at the specified breakpoint and above.</p>
+
+            <h2># Targeting a breakpoint range</h2>
+            <p>By default, styles applied by rules like md:flex will apply at that breakpoint and stay applied at larger
+                breakpoints.
+
+                If you’d like to apply a utility only when a specific breakpoint range is active, stack a responsive
+                modifier like md with a max-* modifier to limit that style to a specific range:</p>
+            <code>max-md	@media not all and (min-width: 768px) { ... }</code>
+            <ul> Some more modifier and queries
+                <li>max-md @media not all and (min-width: 768px) { ... }</li>
+                <li>max-lg @media not all and (min-width: 1024px) { ... }</li>
+                <li>max-xl @media not all and (min-width: 1280px) { ... }</li>
+                <li>max-2xl @media not all and (min-width: 1536px) { ... }</li>
+            </ul>
+        </section>
+        <section id="Dark" class="main-section">
+            <header>Dark Mode</header>
+            <p>Using Tailwind CSS to style your site in dark mode.
+                ​
+                Basic usage
+
+                Now that dark mode is a first-class feature of many operating systems, it’s becoming more and more
+                common to design a dark version of your website to go along with the default design.
+
+                To make this as easy as possible, Tailwind includes a dark variant that lets you style your site
+                differently when dark mode is enabled:</p>
+            <h2># Toggling dark mode manually</h2>
+            <p>If you’ve set a prefix in your Tailwind config, be sure to add that to the dark class. For example, if
+                you have a prefix of tw-, you’ll need to use the tw-dark class to enable dark mode.
+
+                How you add the dark class to the html element is up to you, but a common approach is to use a bit of JS
+                that reads a preference from somewhere (like localStorage) and updates the DOM accordingly.</p>
+            <h2># Customizing the class name</h2>
+            <p>Some frameworks (like NativeScript) have their own approach to enabling dark mode and add a different
+                class name when dark mode is active.
+
+                You can customize the dark mode selector name by setting darkMode to an array with your custom selector
+                as the second item:</p>
+            <code>darkMode: ['class', '[data-mode="dark"]']</code>
+            <ul> Types of theme:
+                <li>localStorage.theme = 'light'</li>
+                <li>localStorage.theme = 'dark'</li>
+            </ul>
+        </section>
+        <section id="Reusing" class="main-section">
+            <header>Reusing Styles</header>
+            <p>Managing duplication and creating reusable abstractions.
+
+                Tailwind encourages a utility-first workflow, where designs are implemented using only low-level utility
+                classes. This is a powerful way to avoid premature abstraction and the pain points that come with it.
+
+                But of course as a project grows, you’ll inevitably find yourself repeating common utility combinations
+                to recreate the same design in many different places.
+
+                For example, in the template below you can see the utility classes for each avatar image are repeated
+                five separate times:</p>
+            <h2># Using editor and language features</h2>
+            <p>A lot of the time, duplication like this isn’t even a real problem because it’s all together in one
+                place, or doesn’t even actually exist because you’re iterating over an array of items and only writing
+                the markup once.
+
+                If the styles you need to reuse only need to be reused within a single file, multi-cursor editing and
+                loops are the simplest way to manage any duplication.</p>
+            <h2># Loops</h2>
+            <p>Before you assume you’re going to need to extract a component or create a custom class for something,
+                make sure you’re actually using it more than once in your template.
+
+                A lot of the time a design element that shows up more than once in the rendered page is only actually
+                authored once because the actual markup is rendered in a loop.
+
+                For example, the duplicate avatars at the beginning of this guide would almost certainly be rendered in
+                a loop in a real project:</p>
+            <code>{#each contributors as user}
+                img class="inline-block h-12 w-12 rounded-full ring-2 ring-white"</code>
+            <ul> flex sm:justify-center space-x-4
+                <li>'Home', '/dashboard'</li>
+                <li>'Team', '/team'</li>
+                <li>'Projects', '/projects'</li>
+                <li>'Reports', '/reports'</li>
+            </ul>
+        </section>
+        <section id="Fun&Dir" class="main-section">
+            <header>Functions & Directives</header>
+            <p>A reference for the custom functions and directives Tailwind exposes to your CSS.</p>
+            <h2># Directives</h2>
+            <p>Directives are custom Tailwind-specific at-rules you can use in your CSS that offer special functionality
+                for Tailwind CSS projects.</p>
+            <h2># Function</h2>
+            <p>Tailwind adds a few custom functions you can use in your CSS to access Tailwind-specific values. These
+                functions are evaluated at build-time, and are replaced by static values in your final CSS.</p>
+            <code><br>@layer components {
+                .card {
+                  background-color: theme(colors.white);
+                  border-radius: theme(borderRadius.lg);
+                  padding: theme(spacing.6);
+                  box-shadow: theme(boxShadow.xl);
+                }
+              }</code>
+            <ul>Different directives
+                <li>@tailwind</li>
+                <li>@layer</li>
+                <li>@apply</li>
+                <li>@config</li>
+            </ul>
+        </section>
+        <footer>All the information on this page has been taken from <a href="https://tailwindcss.com/docs/installation">tailwindcss.com/docs</a>, I am gratefully to have found this infomation helpfull.</footer>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <header>Table of Contents</header>
+            <ul>
+                <hr>
+                <li><a href="#Editor_setup" class="nav-link">Editor Setup</a></li>
+                <hr>
+                <li><a href="#PostCSS" class="nav-link">Using PostCSS</a></li>
+                <hr>
+                <li><a href="#Optimizing" class="nav-link">Optimizing for Production</a></li>
+                <hr>
+                <li><a href="#Browser" class="nav-link">Browser Support</a></li>
+                <hr>
+                <li><a href="#Responsive" class="nav-link">Responsive Design</a></li>
+                <hr>
+                <li><a href="#Dark" class="nav-link">Dark Mode</a></li>
+                <hr>
+                <li><a href="#Reusing" class="nav-link">Reusing Styles</a></li>
+                <hr>
+                <li><a href="#Fun&Dir" class="nav-link">Functions & Directives</a></li>
+                <hr>
+                
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>
