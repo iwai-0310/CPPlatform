@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width:device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles.css">
-    </head>
-    <body>
-        <header id="header">
-            <img src="data:image/png;base64,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" alt="Amul-logo" id="header-img">
-            <nav id="nav-bar">
-                <!-- anchor to types of chocolates on the page -->
-                <label for="">Dark Chocolates</label>
-                <a href="">Classic </a>
-                <a href="">Permium </a>
-                <a href="">Origin </a>
-            </nav>
-        </header>
-        <main>
 
-            
-            <!-- form that submits email to a static site -->
-            <form action="" id="form" action="https://www.freecodecamp.com/email-submit">
-                <input type="email" placeholder="Enter email here.">
-                <input type="submit" id="submit">
-            </form>
-            
-        </main>
-        <footer>
-            
-        </footer>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <img src="data:image/png;base64,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"
+            alt="Amul-logo" id="header-img">
+        <nav id="nav-bar">
+            <!-- anchor to types of chocolates on the page -->
+            <label for="">Dark Chocolates</label>
+            <a href="">Classic </a>
+            <a href="">Permium </a>
+            <a href="">Origin </a>
+        </nav>
+    </header>
+    <main>
+        <secition id="TheCompany">
+            <p>Amul is an acronym (Anand Milk Union Limited) of the Indian cooperative society named Gujarat Milk
+                Marketing Federation based in Anand, Gujarat.It is under the ownership of Gujarat Cooperative
+                Milk Marketing Federation Limited, Department of Cooperation, Government of Gujarat. It is controlled by
+                3.6 million milk producers.
+
+                Tribhuvandas Kishibhai Patel founded the organisation in 1946 and served as its chairman until his
+                retirement in the 1970s. He hired Verghese Kurien in 1949, initially as the general manager, where
+                Kurien guided the technical and marketing efforts of the cooperative. Kurien briefly became the chairman
+                of Amul following Patel's death in 1994, and is credited with the success of Amul's marketing.
+
+                Amul spurred India's White Revolution, which made the country the world's largest producer of milk and
+                milk products, and has since ventured into overseas markets. </p>
+        </secition>
+        <section id="classicDC">
+            The amul Classic Dark Chocolates comes in 3 variants
+            <section id="classicDC--Dark5">
+                <img src="https://amul.com/files/products/promotion/Dark-55_rectbox_with_transparent.png" alt="Dark5">
+                <h3>Amul Dark Chocolate</h3>
+                <h5>Made with the finest ingredients and delecious cocoa.For better texture, the finest particle size
+                    (approx. 20 micron) is achieved through world-class refining, leaving you to indulge in the
+                    exquisite taste of rich dark chocolate.</h5>
+                <br>
+                <h5>150g / 40g / 15g / 100g & 250g</h5>
+            </section>
+            <section id="classicDC--Bitter7">
+                <img src="" alt="Bitter7">
+                <h3></h3>
+            </section>
+            <section id="classicDC--Bitter9">
+                <img src="" alt="Bitter9">
+                <h3></h3>
+            </section>
+        </section>
+
+        <!-- form that submits email to a static site -->
+        <form action="" id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" placeholder="Enter email here.">
+            <input type="submit" id="submit">
+        </form>
+
+    </main>
+    <footer>
+        <!-- TheCompany section info is from the link https://en.wikipedia.org/wiki/Amul from the wikipedia -->
+    </footer>
+</body>
+
 </html>
