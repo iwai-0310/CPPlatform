@@ -13,8 +13,33 @@ header{
  height: 200px;
  width: 100%;
 }
+h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+section label{
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+section p{
+    font-family: 'Agbalumo',sans-serif;
+    font-size: 1rem;
+}
+
+#classicDC{
+    width: 100%;
+    height: 30%;
+}
+#classicDC--Dark5{
+    border: 2px solid white;
+    width: 30%;
+    height: 100%;
+}
 footer{
     background-color: rgb(178, 52, 52) ;
+    
     height: 200px;
     width: 100%;
 }
